@@ -11,6 +11,15 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    /*
+      todo
+      - 週報として活動することを書く
+      - 毎日タップ
+      - できてなくても気にしない
+      - 週一で履歴を表示
+      - 週一でblogにup [plus機能]
+      -
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
