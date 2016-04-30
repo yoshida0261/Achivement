@@ -12,6 +12,7 @@ import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Toast
+import com.github.gfx.android.orma.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -48,6 +49,14 @@ class MainActivity : AppCompatActivity() {
              parent.getItemAtPosition(position)
              Toast.makeText(activity, position.toString(), Toast.LENGTH_SHORT).show()
         })
+
+
+
+        //var orma = OrmaDatabase.builder(this).build()
+
+        //var orma = OrmaDatabase.builder(context).build()
+
+        //OrmaDatabase orma = OrmaDatabase.builder(context).build();
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -69,4 +78,7 @@ class MainActivity : AppCompatActivity() {
 
         return super.onOptionsItemSelected(item)
     }
+
+
 }
+
