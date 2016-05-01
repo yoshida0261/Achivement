@@ -7,17 +7,28 @@ import com.github.gfx.android.orma.annotation.Column;
 import com.github.gfx.android.orma.annotation.PrimaryKey;
 import com.github.gfx.android.orma.annotation.Table;
 
+import android.support.annotation.Nullable;
+import com.github.gfx.android.orma.annotation.Setter
+
 @Table
 class AchiveData{
     @PrimaryKey
-    var id: Long = 0
+    public var id: Long = 0
 
+    @Nullable
     @Column(indexed = true)
-    var title : String = ""
+    public var title : String = ""
 
-    @Column
-    var content: String=""
+    @Setter
+    public fun AchiveData(){}
 
-    @Column
-    var createdTimeMillis: Long=0
+    @Setter
+    public fun AchiveData(id: Long, title: String)
+    {
+       this.id = id
+        this.title = title
+    }
+
+
+
 }
