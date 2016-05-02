@@ -1,4 +1,4 @@
-package stcompany.com.achivement
+package stcompany.com.achivement.activity
 
 import android.app.Activity
 import android.os.Bundle
@@ -12,7 +12,8 @@ import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Toast
-import stcompany.com.achivement.AchiveData
+import stcompany.com.achivement.R
+import stcompany.com.achivement.models.AchiveData
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -36,6 +37,9 @@ class MainActivity : AppCompatActivity() {
 
         activity = this
 
+
+        /*
+
         var list = ArrayList<String>()
         for(a in 1..5){
             list.add(a.toString())
@@ -49,21 +53,9 @@ class MainActivity : AppCompatActivity() {
              parent.getItemAtPosition(position)
              Toast.makeText(activity, position.toString(), Toast.LENGTH_SHORT).show()
         })
-
-
-        var data = AchiveData()
-
-
-
-        //var orma OrmaDatabase.
-
-        //var orma = OrmaDatabase.builder(this).build()
-
+        */
+        //
         //var orma = OrmaDatabase.builder(context).build()
-
-
-
-        var achive = AchiveData()
         //OrmaDatabase orma = OrmaDatabase.builder(context).build();
     }
 

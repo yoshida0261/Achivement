@@ -1,4 +1,4 @@
-package stcompany.com.achivement
+package stcompany.com.achivement.models
 
 /**
  * Created by takeshi on 16/05/01.
