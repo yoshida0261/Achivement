@@ -1,5 +1,7 @@
 package stcompany.com.achivement.di
 
-/**
- * Created by takeshi on 16/05/02.
- */
+public interface ActivityComponent {
+
+    //abstract fun inject(activity: MainActivity)
+    abstract fun inject() // todo パラメタ
+}
