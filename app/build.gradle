@@ -1,10 +1,28 @@
+//apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'com.neenbedankt.android-apt'
+buildscript {
+    ext.kotlin_version = '1.0.1-2'
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+
+    }
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'kotlin-android-extensions'
+
+
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "21.1.2"
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "stcompany.com.achivement"
@@ -19,32 +37,31 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+        disable 'InvalidPackage'
+        disable 'SetTextI18n'
+    }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
 }
 
+kapt {
+    generateStubs = true
+}
+
 
 dependencies {
+    kapt 'com.github.gfx.android.orma:orma-processor:2.4.2'
+    compile 'com.github.gfx.android.orma:orma:2.4.2'
+    kapt 'com.android.databinding:compiler:2.0.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
 
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    apt 'com.github.gfx.android.orma:orma-processor:2.4.5'
-    compile 'com.github.gfx.android.orma:orma:2.4.5'
 }
-buildscript {
-    ext.kotlin_version = '1.0.1-2'
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
-    }
-}
-repositories {
-    mavenCentral()
-}
+

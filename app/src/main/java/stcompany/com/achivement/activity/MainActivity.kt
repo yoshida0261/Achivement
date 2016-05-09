@@ -12,8 +12,10 @@ import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Toast
+import com.github.gfx.android.orma.OrmaDatabaseBuilderBase
 import stcompany.com.achivement.R
 import stcompany.com.achivement.models.AchiveData
+import stcompany.com.achivement.models.OrmaDatabase
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -57,6 +59,16 @@ class MainActivity : AppCompatActivity() {
         //
         //var orma = OrmaDatabase.builder(context).build()
         //OrmaDatabase orma = OrmaDatabase.builder(context).build();
+
+
+
+        //OrmaDatabase.builder(this);
+        // OrmaDatabase.build()
+
+        var achiv = AchiveData()
+        achiv.id = 0
+
+
     }
 
 
