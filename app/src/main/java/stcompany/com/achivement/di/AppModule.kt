@@ -15,9 +15,10 @@ import android.net.ConnectivityManager
 import java.io.File
 
 //import javax.inject.Singleton
-
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
+
 /*import io.github.droidkaigi.confsched.BuildConfig
 import io.github.droidkaigi.confsched.activity.ActivityNavigator
 import io.github.droidkaigi.confsched.api.RequestInterceptor
@@ -41,6 +42,7 @@ class AppModule(app: Application) {
         return context
     }
 
+    /*
     @Singleton
     @Provides
     fun provideGoogleAnalyticsTracker(context: Context): Tracker {
@@ -49,13 +51,14 @@ class AppModule(app: Application) {
         tracker.enableAdvertisingIdCollection(true)
         tracker.enableExceptionReporting(true)
         return tracker
-    }
+    }*/
 
     @Provides
     fun provideConnectivityManager(context: Context): ConnectivityManager {
         return context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
     }
 
+    /*
     @Singleton
     @Provides
     fun provideHttpClient(context: Context, interceptor: Interceptor): OkHttpClient {
@@ -71,7 +74,7 @@ class AppModule(app: Application) {
     fun provideRequestInterceptor(connectivityManager: ConnectivityManager): Interceptor {
         return RequestInterceptor(connectivityManager)
     }
-
+*/
     @Provides
     fun provideSharedPreferences(context: Context): SharedPreferences {
         return context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
@@ -82,6 +85,7 @@ class AppModule(app: Application) {
         return CompositeSubscription()
     }
 
+    /*
     @Singleton
     @Provides
     fun provideOrmaDatabase(context: Context): OrmaDatabase {
@@ -92,13 +96,14 @@ class AppModule(app: Application) {
                 helper.renameColumn("Session", "categoryId", "category")
             }
         }).build()
-    }
+    }*/
 
+    /*
     @Singleton
     @Provides
     fun provideActivityNavigator(): ActivityNavigator {
         return ActivityNavigator()
-    }
+    }*/
 
     companion object {
 
