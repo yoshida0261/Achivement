@@ -14,7 +14,7 @@ import android.widget.ListView
 import android.widget.Toast
 import com.github.gfx.android.orma.OrmaDatabaseBuilderBase
 import stcompany.com.achivement.R
-import stcompany.com.achivement.model.Achive
+//import stcompany.com.achivement.model.Achive
 //import stcompany.com.achivement.models.AchiveData
 //import stcompany.com.achivement.models.OrmaDatabase
 //import stcompany.com.achivement.model.OrmaDatabase
