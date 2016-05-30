@@ -14,6 +14,8 @@ import android.widget.ListView
 import android.widget.Toast
 import com.github.gfx.android.orma.OrmaDatabaseBuilderBase
 import stcompany.com.achivement.R
+import stcompany.com.achivement.model.AchiveModel
+import stcompany.com.achivement.model.OrmaDatabase
 //import stcompany.com.achivement.model.Achive
 //import stcompany.com.achivement.models.AchiveData
 //import stcompany.com.achivement.models.OrmaDatabase
@@ -58,12 +60,12 @@ class MainActivity : AppCompatActivity() {
              Toast.makeText(activity, position.toString(), Toast.LENGTH_SHORT).show()
         })
         */
-        /*
+
         var orma = OrmaDatabase.builder(this).build()
-        var achiv = Achive()
+        var achiv = AchiveModel();
         achiv.id = 1
-        orma.insertIntoAchive(achiv)
-        */
+        //orma.insertIntoAchive(achiv)
+        orma.insertIntoAchiveModel((achiv));
         //OrmaDatabase orma = OrmaDatabase.builder(context).build();
 
 
