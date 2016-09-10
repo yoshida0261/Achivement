@@ -59,8 +59,7 @@ dependencies {
     apt 'com.github.gfx.android.orma:orma-processor:2.4.5'
     compile 'com.github.gfx.android.orma:orma:2.4.5'
 
-    apt 'com.google.dagger:dagger-compiler:2.0.2'
-    compile 'com.google.dagger:dagger:2.0.2'
+    compile 'com.github.salomonbrys.kodein:kodein-android:3.0.0'
     provided 'org.glassfish:javax.annotation:10.0-b28'
 
     apt 'com.android.databinding:compiler:2.0.0'

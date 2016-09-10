@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         /*
 
+
         var list = ArrayList<String>()
         for(a in 1..5){
             list.add(a.toString())
