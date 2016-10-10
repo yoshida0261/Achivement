@@ -15,9 +15,6 @@ import android.net.ConnectivityManager
 import java.io.File
 
 //import javax.inject.Singleton
-import dagger.Module
-import dagger.Provides
-import javax.inject.Singleton
 
 /*import io.github.droidkaigi.confsched.BuildConfig
 import io.github.droidkaigi.confsched.activity.ActivityNavigator
@@ -28,7 +25,6 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 //import rx.subscriptions.CompositeSubscription
 */
-@Module
 class AppModule(app: Application) {
 
     private val context: Context
@@ -37,7 +33,7 @@ class AppModule(app: Application) {
         context = app
     }
 
-    @Provides
+   // @Provides
     fun provideContext(): Context {
         return context
     }
@@ -53,7 +49,7 @@ class AppModule(app: Application) {
         return tracker
     }*/
 
-    @Provides
+    //@Provides
     fun provideConnectivityManager(context: Context): ConnectivityManager {
         return context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
     }
@@ -75,12 +71,12 @@ class AppModule(app: Application) {
         return RequestInterceptor(connectivityManager)
     }
 */
-    @Provides
+   // @Provides
     fun provideSharedPreferences(context: Context): SharedPreferences {
         return context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
     }
 
-    @Provides
+   // @Provides
     fun provideCompositeSubscription(): CompositeSubscription {
         return CompositeSubscription()
     }
